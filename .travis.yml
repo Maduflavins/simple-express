@@ -19,6 +19,6 @@ script:
   - docker tag simple-express maduflavins/simple-express:latest
 
 after_success:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push maduflavins/simple-express
+  - echo sudo | "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - sudo docker  push maduflavins/simple-express
 
